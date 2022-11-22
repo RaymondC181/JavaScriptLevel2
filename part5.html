@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic CSS</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            font:bold 16pt arial; 
+        }
+        button{
+            background-color:red; 
+            font:14pt comic; 
+        }
+    </style>
+    <script src = "utilities.js"></script>
+    <script>
+        function changeNumber()
+        {
+            rndNum = getRandomInteger(1, 10); 
+            display();
+        }
+function display()
+{
+    numberOutput.innerHYML = rndNum;
+}
+
+function initialize()
+{
+    numberOutput = document.getElementById("numout");
+    rndNum = 0; 
+
+    display(); 
+}
+    </script>
+</head>
+<body onload = "initialize();">
+    <h1>This is my great page about external files</h1>
+    <p id = "numout"></p>
+    <button onclick = "changeNumber();">Change the number</button>
+</body>
+</html>
